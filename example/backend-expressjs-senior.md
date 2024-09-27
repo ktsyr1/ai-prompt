@@ -1,24 +1,5 @@
 <!-- ai-prompt.md -->
-After analyzing the ai-prompt.md file, I've identified a few minor issues and have some suggestions for improvement. Here's my analysis:
 
-1. Consistency and Conflicts:
-The file is generally consistent and there are no major conflicts in the information provided. The project structure, database schemas, API endpoints, and security measures all align well with the described frameworks and libraries.
-2. Issues:
-a. The project structure doesn't explicitly mention where the Redis configuration would be stored.
-b. The rate limiting description doesn't specify where the configuration for this would be placed in the project structure.
-c. The refresh token mechanism is mentioned, but there's no specific endpoint or method described for handling token refresh.
-3. Suggestions for Improvement:
-a. Add a `redis.ts` file in the `config/` directory to handle Redis configuration.
-b. Include a `rateLimiter.ts` file in the `middlewares/` directory to configure and apply rate limiting.
-c. Add more detail about the refresh token mechanism, possibly including it in the User schema and describing its storage and management.
-d. Consider adding a section on error handling and logging strategies.
-e. Include information about environment variables that should be set in the `.env` file.
-f. Add a section on API documentation, possibly using tools like Swagger or OpenAPI.
-
-
-Given these minor issues and suggestions, I'll regenerate the ai-prompt.md file with these improvements incorporated:
-
-```markdown
 # AI Prompt for Todo-list Application Backend
 
 ## Overview
@@ -31,10 +12,9 @@ The Todo-list application allows users to create, update, and manage their tasks
 - **TypeScript**: Adds type safety and scalability.
 - **JWT**: For user authentication using access tokens.
 - **Refresh Tokens**: Ensures secure session management.
-- **Redis** (v6.x): Used for caching and performance improvements.
-- **Rate Limiting**: Prevents API abuse and protects against DoS attacks.
+- **Redis** (v6.x): Used for caching and performance improvements. 
 - **Jest** (v27.x): Testing framework for unit and integration tests.
-
+- Rate Limiting
 ## Project Structure
 ```
 
@@ -91,17 +71,6 @@ The Todo-list application allows users to create, update, and manage their tasks
 - **DELETE /api/v1/todos/:id**: Delete a todo by its ID.
 - **GET /api/v1/todos/:id**: Retrieve a specific todo by its ID.
 
-## Security Measures
-- **JWT Authentication**: Uses JWTs for stateless authentication. Refresh tokens ensure long sessions while maintaining security.
-- **Password Hashing**: User passwords are hashed using bcrypt before storage.
-- **Helmet**: Middleware for setting various HTTP headers to secure the app from well-known web vulnerabilities.
-- **Rate Limiting**: Limit requests per user/IP to prevent API abuse (e.g., 100 requests per minute for general endpoints, 10 requests per minute for login attempts).
-
-## Error Handling and Logging
-- Implement a centralized error handling middleware.
-- Use a logging library like Winston for structured logging.
-- Log all errors and important events for monitoring and debugging.
-
 ## Environment Variables
 The following environment variables should be set in the `.env` file:
 - `PORT`: The port on which the server will run.
@@ -111,25 +80,13 @@ The following environment variables should be set in the `.env` file:
 - `REFRESH_TOKEN_SECRET`: Secret key for signing refresh tokens.
 - `NODE_ENV`: Current environment (development, production, test).
 
-## API Documentation
-- Implement API documentation using Swagger or OpenAPI.
-- Include the documentation generation in the build process.
-- Host the API documentation at `/api-docs` endpoint.
+## البرومبت
+- استخدم es6 & ts في كتابة الكود 
+- يجب ان يكون الكود بسيط وقابل للصيانة 
+- قم بكتابة اختبارات شاملة للكود 
+- عند انشاء مجلدات او ملفات اجمعها في امر واحد 
+- دائما استخدم destruction فيقي استيراد كل المكونات
+- قم بمراعات معايير الامان دائما عند كتابة اي كود
 
-## Caching Strategy
-- Use Redis to cache frequently accessed data.
-- Implement cache invalidation strategies to ensure data consistency.
-- Cache user sessions and rate limiting data for improved performance.
-
-## Testing
-- Write unit tests for individual functions and components.
-- Implement integration tests for API endpoints.
-- Use Jest for running tests and generating coverage reports.
-- Aim for at least 80% test coverage.
-
-## Analyze and test the ai-prompt.md file
-- Ensure that all details are consistent and that there are no conflicts, gaps or illogical additions.
-- Any code updates or changes that conflict with this document should be reflected directly in this file. 
-- Extracting problems and adding suggestions
--If there are any project updates that conflict with this file, rebuild the file
-The response must include problems and suggestions, and if necessary, generate the file again
+## التنفيذ 
+قم ببناء المشروع
