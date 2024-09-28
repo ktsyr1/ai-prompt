@@ -5,14 +5,14 @@
 The Todo-list application allows users to create, update, and manage their tasks efficiently with Flask. The application ensures security, scalability, and performance through advanced caching, rate-limiting, and user authentication techniques.
 
 ## Frameworks & Libraries
-- **Flask**: Python web framework for API development.
-- **MongoDB**: Database for managing task and user data.
-- **Python (v3.x)**: Programming language.
-- **Flask-JWT-Extended**: Library for handling JWT authentication.
-- **Redis** (v6.x): Used for caching and performance improvements.
-- **pytest** (v6.x): Testing framework for unit and integration tests.
-- **bcrypt**: For password hashing.
-- **Flask-Limiter**: Rate-limiting middleware.
+- **Flask**
+- **MongoDB**
+- **Python (v3.x)**
+- **Flask-JWT-Extended**
+- **Redis**  
+- **pytest** 
+- **bcrypt** 
+- **Flask-Limiter** 
 
 ## Project Structure
 ```
@@ -74,17 +74,17 @@ class Todo(Document):
 ## API Endpoints
 
 ### Authentication:
-- **POST /api/v1/auth/register**: Create a new user account.
-- **POST /api/v1/auth/login**: Log in and return a JWT token.
-- **POST /api/v1/auth/refresh-token**: Renew JWT tokens using refresh tokens.
-- **POST /api/v1/auth/logout**: Invalidate the refresh token and terminate the session.
+- **POST /api/v1/auth/register** 
+- **POST /api/v1/auth/login** 
+- **POST /api/v1/auth/refresh-token** 
+- **POST /api/v1/auth/logout** 
 
 ### Todo Management:
-- **GET /api/v1/todos**: Retrieve all todos for the authenticated user.
-- **POST /api/v1/todos**: Create a new todo item.
-- **PUT /api/v1/todos/:id**: Update an existing todo by its ID.
-- **DELETE /api/v1/todos/:id**: Delete a todo by its ID.
-- **GET /api/v1/todos/:id**: Retrieve a specific todo by its ID.
+- **GET /api/v1/todos** 
+- **POST /api/v1/todos** 
+- **GET /api/v1/todos/:id** 
+- **PUT /api/v1/todos/:id** 
+- **DELETE /api/v1/todos/:id** 
 
 ## Environment Variables
 The following environment variables should be set in the `.env` file:
