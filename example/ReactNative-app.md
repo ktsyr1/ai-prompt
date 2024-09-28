@@ -39,15 +39,13 @@ The Todo-list application allows users to create, update, and manage their tasks
 - **Add Todo Screen**: 
  
 ## Environment Variables
-- `API_URL`: Base URL for the backend API.
-- `JWT_SECRET_KEY`: Secret key for JWTs.
+- `API_URL`: Base URL for the backend API. 
 - `APP_ENV`: Current environment (development, production).
 
 ## البرومبت
 
 - استخدم Redux لإدارة الحالة.
-- تحقق من المدخلات باستخدام React Hook Form .
-- تأمين التطبيق باستخدام JWT لحماية الوصول إلى الشاشات.
+- تحقق من المدخلات باستخدام React Hook Form . 
 - استخدم Redux Thunk أو Saga للتعامل مع الطلبات غير المتزامنة.
 - استخدم React Navigation للتنقل بين الشاشات بسهولة.
 - قم بإنشاء مكونات قابلة لإعادة الاستخدام لتجنب تكرار الكود.
