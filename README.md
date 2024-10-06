@@ -129,10 +129,10 @@ Defining the database structure is vital for the application, as good design fac
 
 ```yaml
 # Note Schema  
-	title 
-	content 
-	createdAt 
-	updatedAt  
+title 
+content 
+createdAt 
+updatedAt  
 ```
 
 ## Standards to Follow (Directed Commands)
