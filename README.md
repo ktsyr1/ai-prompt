@@ -7,6 +7,7 @@
 ### 🎯 What is an AI Prompt?
 Imagine having a magical translator that turns your ideas into perfect code. AI Prompt is the communication bridge between you and artificial intelligence, ensuring you get code that perfectly fits your project.
 
+[الترجمة العربية](/README-ar.md)
 ## 📊 Impact of AI Prompt on Your Project
 
 ### Before AI Prompt: Problems with Traditional Generative AI Programming
