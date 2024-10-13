@@ -29,8 +29,7 @@ The **Simple Blog** application allows users to create and manage their blog pos
 │   ├── models/             # MongoDB schemas for users, posts, and comments
 │   ├── routes/             # API routes for users, posts, and comments
 │   ├── utils/              # Utility functions (e.g., error handling)
-│   └── app.ts              # Application entry point
-├── tests/                  # Unit and integration tests
+│   └── app.ts              # Application entry point 
 ├── .env                    # Environment variables
 ├── tsconfig.json           # TypeScript configuration
 └── package.json            # Project dependencies and scripts
@@ -55,6 +54,8 @@ The **Simple Blog** application allows users to create and manage their blog pos
 ```ts
 {
   title: String,        // Title of the blog post
+bio
+image
   content: String,      // Main content of the post
   author: ObjectId,     // Reference to the User who created the post
   createdAt: Date,      // Date the post was created
@@ -63,17 +64,7 @@ The **Simple Blog** application allows users to create and manage their blog pos
   comments: [ObjectId]  // References to comments related to the post
 }
 ```
-
-### **Comment Schema**
-```ts
-{
-  postId: ObjectId,     // Reference to the associated blog post
-  userId: ObjectId,     // Reference to the user who made the comment
-  content: String,      // The content of the comment
-  createdAt: Date       // Date the comment was made
-}
-```
-
+ 
 ---
 
 ## **API Endpoints**
@@ -87,12 +78,7 @@ The **Simple Blog** application allows users to create and manage their blog pos
 - **GET /api/posts/:id**: Retrieve a specific blog post by its ID.
 - **POST /api/posts**: Create a new blog post (authenticated users only).
 - **PUT /api/posts/:id**: Update an existing blog post (authenticated users).
-- **DELETE /api/posts/:id**: Delete a blog post (admins only).
-
-### **Comment Management**
-- **POST /api/posts/:id/comments**: Add a comment to a blog post.
-- **GET /api/posts/:id/comments**: Retrieve all comments for a specific post.
-
+- **DELETE /api/posts/:id**: Delete a blog post (adm 
 ---
 
 ## **Environment Variables**
@@ -100,23 +86,19 @@ The following environment variables should be set in the `.env` file:
 - `PORT`: The port on which the server runs.
 - `MONGODB_URI`: The MongoDB connection string.
 - `JWT_SECRET`: Secret key for signing JWT tokens.
-- `NODE_ENV`: Environment type (development, production, etc.).
-- `REDIS_URL`: Redis connection string (optional for caching).
+- `NODE_ENV`: Environment type (development, production, etc.). 
 
 ---
 
 ## **Prompts for AI**
-- Use **TypeScript** for strict typing and better maintainability.
-- Write **unit tests** and **integration tests** to cover all routes and functionality.
+- Use **TypeScript** for strict typing and better maintainability. 
 - Ensure that all **input validations** are done using **Express middlewares**.
 - Implement **JWT authentication** securely with the proper handling of tokens (access & refresh tokens).
 - Follow **RESTful API design** principles.
 - Structure the code in a way that makes it **modular** and easy to maintain or extend in the future.
 - **Password Hashing**: Use bcryptjs to securely hash user passwords before storing them.
-- **JWT Authentication**: Implement secure token-based authentication for all protected routes.
-- **Rate Limiting**: Use rate-limiting middleware to prevent API abuse and DoS attacks.
-- **Input Validation**: Validate all incoming requests to avoid injection attacks.
-- **Unit Tests**: Test individual functions like authentication, data validation, and business logic.
+- **JWT Authentication**: Implement secure token-based authentication for all protected routes. 
+- **Input Validation**: Validate all incoming requests to avoid injection attacks. 
 - **Integration Tests**: Ensure that the API endpoints work together properly by testing routes, controllers, and database interactions.
 - Write code that is **easy to understand** and **well-commented**.
 - Focus on **simplicity** and **scalability**.
