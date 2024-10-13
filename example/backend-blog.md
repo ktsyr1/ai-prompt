@@ -14,9 +14,7 @@ The **Simple Blog** application allows users to create and manage their blog pos
 - **TypeScript**: Type-safe JavaScript for maintainability and scalability.
 - **JWT (JSON Web Token)**: For secure user authentication.
 - **bcryptjs**: For password hashing.
-- **Mongoose**: ODM for MongoDB.
-- **Jest**: Testing framework for unit and integration tests.
-- **Redis**: Optional caching for performance improvement.
+- **Mongoose**: ODM for MongoDB. 
 
 ---
 
